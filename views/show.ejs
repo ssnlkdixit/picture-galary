@@ -1,0 +1,17 @@
+<h1>this is a show template</h1>
+<h3><%= campground.name %></h3>
+<h3><img src="<%= campground.img %>" ></h3>
+<h3><%= campground.description %></h3>
+<p>
+    <a href="/campground/<%= campground._id %>/comment/new">add new comment</a>
+</p>
+
+<% campground.comment.forEach(function(comments){ %>
+    <strong><p><%= comments.author %></strong>- <%= comments.text %></p>
+     
+
+
+<% }) %>
+
+
+

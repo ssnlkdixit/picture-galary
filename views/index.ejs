@@ -1,0 +1,21 @@
+<%- include('header') %>
+
+
+<h1>this is the campground page!</h1>
+<a href="/campground/new">Add new component</a>
+<% campground.forEach(function(campgrounds){ %>
+  <div>
+      <h3><%= campgrounds.name %></h3>
+      <img src="<%= campgrounds.img %>" > 
+      <p>
+        <a href="/campground/<%= campgrounds._id %>" class="btn btn-primary">more info</a>
+      </p>
+  </div>
+
+
+<% }) %>
+<%- include('footer') %>
+
+
+
+
